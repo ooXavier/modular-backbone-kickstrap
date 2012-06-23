@@ -1,5 +1,6 @@
 require.config({
     paths: {
+        h5bp:       'libs/h5bp/modernizr-2.5.3.min',
         jquery:     'libs/jquery/jquery',
         underscore: 'libs/underscore/underscore',
         backbone:   'libs/backbone/backbone',
@@ -7,8 +8,22 @@ require.config({
         json2:      'libs/json/json2',
         chosen:     'libs/chosen/chosen.jquery.min',
         jgrowl:     'libs/jgrowl/jquery.jgrowl.min',
-        h5bp:       'libs/h5bp/modernizr-2.5.3.min',
         templates:  '../templates'
+    },
+    shim: {
+      underscore: {
+        exports: '_'
+      },
+      backbone: {
+        deps: ['underscore', 'jquery'],
+        exports: 'Backbone'
+      },
+      chosen: {
+        deps:['jquery']
+      },
+      jgrowl:   {
+        deps:['jquery']
+      },
     }
 });
 
