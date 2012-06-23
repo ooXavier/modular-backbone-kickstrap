@@ -14,7 +14,7 @@
     modules: [
         {
             name: 'main',
-            exclude: ['jquery', 'underscore', 'backbone', 'text', 'json2']
+            exclude: ['jquery', 'underscore', 'backbone', 'text', 'json2', 'chosen', 'jgrowl']
         }
     ]
 })
